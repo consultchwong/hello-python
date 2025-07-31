@@ -1,7 +1,7 @@
 # 核心依赖
 pandas          # 数据处理核心库（需指定版本确保兼容性）[3,5](@ref)
 yfinance        # 雅虎财经数据接口（与pandas 2.1.2兼容）[2,7](@ref)
-talib
+tulip-python
 
 # 隐式依赖（yfinance/pandas的依赖树，需显式声明避免冲突）
 numpy           # pandas的底层计算依赖[3,8](@ref)
