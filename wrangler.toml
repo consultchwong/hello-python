@@ -1,4 +1,4 @@
-name = "yfinance-worker"
+name = "hello-python"
 main = "index.py"
 compatibility_date = "2024-06-01"
 
