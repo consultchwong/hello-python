@@ -4,11 +4,3 @@ compatibility_date = "2024-06-01"
 compatibility_flags = ["python_workers"]
 
 
-
-[ai]
-binding = "AI"
-
-[unsafe]
-bindings = [
-  { name = "PYTHON", type = "python_wasm" }  # Enable Python Wasm runtime
-]
