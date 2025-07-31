@@ -1,7 +1,6 @@
 from workers import handler, Response
 import json
 import yfinance as yf
-import talib
 import pandas as pd
 from datetime import datetime, timedelta
 
@@ -23,12 +22,9 @@ async def on_fetch(request, env):
         
         # 3. 计算技术指标
         closes = hist["Close"].values
-        hist["RSI"] = talib.RSI(closes, timeperiod=14)
-        hist["MACD"], hist["MACD_Signal"], _ = talib.MACD(closes)
-        hist["SMA_20"] = talib.SMA(closes, timeperiod=20)
         
         # 4. 格式化输出
-        hist = hist[["Close", "RSI", "MACD", "MACD_Signal", "SMA_20"]]
+        hist = hist[["Close"]]
         hist = hist.dropna()  # 清除空值
         data = {
             "ticker": ticker,
