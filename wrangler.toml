@@ -1,4 +1,10 @@
-name = "hello-python"
-main = "src/entry.py"
-compatibility_flags = ["python_workers"]
-compatibility_date = "2024-03-29"
+name = "yfinance-worker"
+main = "index.py"
+compatibility_date = "2024-06-01"
+
+[ai]
+binding = "AI"
+
+[unsafe.bindings]
+type = "python_wasm"
+name = "PYTHON"
