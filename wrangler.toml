@@ -6,6 +6,7 @@ compatibility_flags = ["python_workers"]
 [ai]
 binding = "AI"
 
-[unsafe.bindings]
-type = "python_wasm"
-name = "PYTHON"
+[unsafe]
+bindings = [
+  { name = "PYTHON", type = "python_wasm" }  # Enable Python Wasm runtime
+]
