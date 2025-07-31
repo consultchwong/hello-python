@@ -2,7 +2,6 @@ from workers import handler, Response
 import json
 import asyncio
 import pyodide_js
-import pandas as pd
 from datetime import datetime, timedelta
 
 # 计算技术指标的纯Python实现（避免TA-Lib依赖）
@@ -50,7 +49,8 @@ async def on_fetch(request, env):
     try:
         # 2. 动态导入安装的模块
         import yfinance as yf
-        
+        import pandas as pd
+
         # 3. 获取历史数据
         stock = yf.Ticker(ticker)
         hist = stock.history(
